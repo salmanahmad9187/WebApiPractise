@@ -1,0 +1,5 @@
+c:\Users\salman\documents\visual studio 2015\Projects\WebApi\BusinessEntites\bin\Debug\BusinessEntites.dll
+c:\Users\salman\documents\visual studio 2015\Projects\WebApi\BusinessEntites\bin\Debug\BusinessEntites.pdb
+c:\Users\salman\documents\visual studio 2015\Projects\WebApi\BusinessEntites\obj\Debug\BusinessEntites.csprojResolveAssemblyReference.cache
+c:\Users\salman\documents\visual studio 2015\Projects\WebApi\BusinessEntites\obj\Debug\BusinessEntites.dll
+c:\Users\salman\documents\visual studio 2015\Projects\WebApi\BusinessEntites\obj\Debug\BusinessEntites.pdb
