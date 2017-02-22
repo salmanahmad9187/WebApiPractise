@@ -1,0 +1,36 @@
+using AutoMapper;
+using BusinessServices;
+//using DataModel.UnitOfWork;
+using Microsoft.Practices.Unity;
+using Resolver;
+using System.Web.Http;
+using Unity.WebApi;
+
+namespace WebApi1
+{
+    public static class UnityConfig
+    {
+        public static void RegisterComponents()
+        {
+			var container = new UnityContainer();
+            
+            // register all your components with the container here
+            // it is NOT necessary to register your controllers
+            
+            // e.g. container.RegisterType<ITestService, TestService>();
+            
+            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+            //container.RegisterType<IProductServices, ProductServices>().RegisterType<UnitOfWork>(new HierarchicalLifetimeManager())
+            //    .RegisterInstance<IMapper>(ModelMapper.Mapper)
+            //    .RegisterType<UnitOfWork>();
+            RegisterTypes(container);
+
+            
+        }
+        public static void RegisterTypes(IUnityContainer container)
+        {
+            ComponentLoader.LoadContainer(container, ".\\bin", "WebApi*.dll");
+            ComponentLoader.LoadContainer(container, ".\\bin", "BusinessServices.dll");
+        }
+    }
+}
