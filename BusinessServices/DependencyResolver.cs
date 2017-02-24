@@ -15,6 +15,7 @@ namespace BusinessServices
        public void SetUp(IRegisterComponent registerComponent)
         {
             registerComponent.RegisterType<IProductServices, ProductServices>();
+            registerComponent.RegisterType<IUserServices, UserServices>();
             registerComponent.RegisterInstance<IMapper>(ModelMapper.Mapper);
         }
     }
