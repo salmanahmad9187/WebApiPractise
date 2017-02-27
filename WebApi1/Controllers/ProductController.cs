@@ -8,9 +8,11 @@ using BusinessServices;
 using BusinessEntites;
 using AttributeRouting;
 using AttributeRouting.Web.Http;
+using WebApi1.Filters;
 
 namespace WebApi1.Controllers
 {
+    [AuthorizationRequired]
     [AttributeRouting.RoutePrefix("v1/Products/Product")]
     public class ProductController : ApiController
     {

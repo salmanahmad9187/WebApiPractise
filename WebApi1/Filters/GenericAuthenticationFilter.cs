@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Security.Principal;
 using System.Text;
 using System.Threading;
 using System.Web;
@@ -23,7 +26,7 @@ namespace WebApi1.Filters
         }
         public override void OnAuthorization(HttpActionContext filterContext)
         {
-            if (_isActive) return;
+            if (!_isActive) return;
             var identity = FetchAuthHeader(filterContext);
             if (identity == null)
             {
